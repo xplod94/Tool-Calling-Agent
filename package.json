@@ -1,0 +1,22 @@
+{
+  "name": "tool-calling-search",
+  "version": "1.0.0",
+  "description": "An AI agent with ability to perform web search",
+  "license": "ISC",
+  "author": "Pranav Pande",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev:client": "npm start --workspace=tool-calling-client",
+    "dev:backend": "npm run dev --workspace=tool-calling-backend",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:backend\""
+  },
+  "workspaces": [
+    "client",
+    "backend"
+  ],
+  "dependencies": {
+    "p-limit": "^7.3.0",
+    "playright": "^0.0.22"
+  }
+}
